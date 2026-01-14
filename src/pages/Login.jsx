@@ -20,7 +20,7 @@ function Login() {
     setMessage("Login submitted!");
   };
 
-  //dikomasabtan asdadadasd
+  //ayokona asdadadasd
 
   return (
     <div className="login-page">
