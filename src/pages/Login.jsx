@@ -20,21 +20,18 @@ function Login() {
     setMessage("Login submitted!");
   };
 
-  //hjavsdgfusa
+  //dikomasabtan asdadadasd
 
   return (
     <div className="login-page">
-      {/* Login card */}
       <div className="login-card">
         <img src={logo} alt="Logo" className="login-logo" />
-
         <h2 className="login-title">Login to your account</h2>
         <p className="login-subtitle">
           Enter your credentials below to login to your account
         </p>
 
         <form onSubmit={handleSubmit}>
-          {/* Email field */}
           <div className="form-group">
             <label>Email</label>
             <input
@@ -44,8 +41,6 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
-          {/* Password field */}
           <div className="form-group">
             <label>Password</label>
 
@@ -56,7 +51,6 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
               />
-
               <span
                 className="eye"
                 onClick={() => setShowPassword(!showPassword)}
@@ -65,14 +59,10 @@ function Login() {
               </span>
             </div>
           </div>
-
-          {/* Login button */}
           <button type="submit" className="login-btn">
             Log In
           </button>
         </form>
-
-        {/* Message */}
         {message && <p className="message">{message}</p>}
       </div>
     </div>
