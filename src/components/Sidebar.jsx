@@ -1,6 +1,6 @@
 import "./Sidebar.css";
 
-function Sidebar() {
+function Sidebar({ onLogout }) {
   return (
     <div className="sidebar">
       <h2 className="logo">MyApp</h2>
@@ -10,7 +10,9 @@ function Sidebar() {
         <li>Profile</li>
         <li>Users</li>
         <li>Settings</li>
-        <li>Logout</li>
+        <li onClick={onLogout} style={{ cursor: "pointer" }}>
+          Logout
+        </li>
       </ul>
     </div>
   );

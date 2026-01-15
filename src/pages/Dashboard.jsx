@@ -1,16 +1,16 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 
-function Dashboard({ user }) {
+function Dashboard({ user, onLogout }) {
   return (
     <div>
-      <Sidebar />
+      <Sidebar onLogout={onLogout} />
       <Header user={user} />
 
       <div
         style={{
-          marginLeft: "220px", // same as sidebar width
-          marginTop: "60px", // same as header height
+          marginLeft: "220px",
+          marginTop: "60px",
           padding: "20px",
         }}
       >
