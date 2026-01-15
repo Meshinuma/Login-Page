@@ -1,13 +1,15 @@
 /* Sidebar container */
 .sidebar {
   width: 220px; /* fixed width */
-  height: 100vh; /* full screen height */
+  max-width: 80%;
+  height: calc(100vh - 60px); /* full screen height */
   background-color: #1e293b; /* dark blue */
   color: white;
   padding: 20px 5px;
   position: fixed; /* stays on the left */
-  top: 0;
+  top: 60px;
   left: 0;
+  transition: transform 0.3s ease;
 }
 
 /* App logo/title */
@@ -33,4 +35,15 @@
 /* Hover effect */
 .menu li:hover {
   background-color: #334155;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* hide offscreen */
+    z-index: 1000; /* on top of content */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* show sidebar */
+  }
 }
