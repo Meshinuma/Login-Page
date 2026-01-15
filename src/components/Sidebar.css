@@ -4,7 +4,7 @@
   height: 100vh; /* full screen height */
   background-color: #1e293b; /* dark blue */
   color: white;
-  padding: 20px;
+  padding: 20px 5px;
   position: fixed; /* stays on the left */
   top: 0;
   left: 0;
