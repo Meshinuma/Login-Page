@@ -1,0 +1,36 @@
+/* Sidebar container */
+.sidebar {
+  width: 220px; /* fixed width */
+  height: 100vh; /* full screen height */
+  background-color: #1e293b; /* dark blue */
+  color: white;
+  padding: 20px;
+  position: fixed; /* stays on the left */
+  top: 0;
+  left: 0;
+}
+
+/* App logo/title */
+.logo {
+  margin-bottom: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* Menu list */
+.menu {
+  list-style: none; /* remove bullets */
+  padding: 0;
+}
+
+/* Menu items */
+.menu li {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.menu li:hover {
+  background-color: #334155;
+}
