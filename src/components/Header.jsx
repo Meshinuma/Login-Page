@@ -5,18 +5,26 @@ import logo from "../assets/logo.png";
 function Header({ user }) {
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  // Update the time every second
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
-
-    return () => clearInterval(timer); // cleanup on unmount
+    return () => clearInterval(timer);
   }, []);
 
-  // Format date & time nicely
-  const formattedTime = currentTime.toLocaleTimeString();
-  const formattedDate = currentTime.toLocaleDateString();
+  const formattedTime = currentTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+
+  const formattedDate = currentTime.toLocaleDateString([], {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  const initials = user.email.slice(0, 2).toUpperCase();
 
   return (
     <header className="dashboard-header">
@@ -25,12 +33,19 @@ function Header({ user }) {
       </div>
 
       <div className="header-right">
-        <div className="date-time">
-          {formattedDate} {formattedTime}
+        
+        <div className="date-card">
+          <div className="date-label">Current Date and Time:</div>
+          <div className="date-value">
+            {formattedDate}, {formattedTime}
+          </div>
         </div>
-        <div className="profile">
-          {user.email} {/* or username if you have one */}
+
+      
+        <div className="profile-avatar">
+          {initials}
         </div>
+
       </div>
     </header>
   );
